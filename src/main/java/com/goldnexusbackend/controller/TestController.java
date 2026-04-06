@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/goldnexus/user")
-public class DataController {
+public class TestController {
 
-    @RequestMapping("/get_data")
-    public Res getData() {
+    @RequestMapping("/test")
+    public Res test() {
         return new Res(200,"123",null);
     }
 }

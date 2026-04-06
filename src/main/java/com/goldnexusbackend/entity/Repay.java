@@ -4,13 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//登录请求接收
+import java.math.BigDecimal;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class VO {
-    private String username;
-    private String password;
-    private String phone;
+@NoArgsConstructor
+public class Repay {
+    Integer applicationId;
+    Integer periodNumber;
+    BigDecimal amount;
 }
