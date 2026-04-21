@@ -1,5 +1,5 @@
 package com.goldnexusbackend.controller;
-
+import com.goldnexusbackend.service.UserPenaltyService;
 import com.goldnexusbackend.entity.LoanApplication;
 import com.goldnexusbackend.entity.Res;
 import com.goldnexusbackend.service.UserLoanService;
@@ -17,6 +17,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class UserLoanController {
     private final UserLoanService userLoanService;
+    private final UserPenaltyService userPenaltyService;
 
     @PostMapping("/products")
     public Res selectAllProducts() {
@@ -36,6 +37,7 @@ public class UserLoanController {
     @PostMapping("/repayPlans")
     public Res repayPlans(@RequestBody Map<String, Integer> request) {
         Integer applicationId = request.get("applicationId");
+        userPenaltyService.check_overdue();//查询还款计划时检查一遍是否逾期
         return userLoanService.repaymentPlan(applicationId);
     }
 
