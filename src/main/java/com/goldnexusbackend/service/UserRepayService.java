@@ -17,7 +17,6 @@ import java.util.List;
 @Slf4j
 public class UserRepayService {
     private final UserRepayMapper  userRepayMapper;
-
     Res res = new Res();
 
     @Transactional
@@ -33,8 +32,8 @@ public class UserRepayService {
             res.setData(null);
             return res;
         }
-
-        if(amount.compareTo(repaymentList.get(periodNumber-1).getAmount())==0){
+        //如果还款金额恰好等于应还金额+罚息，则还款成功
+        if(amount.compareTo(repaymentList.get(periodNumber-1).getAmount().add(repaymentList.get(periodNumber-1).getPenaltyAmount()))==0){
             Integer planId = repaymentList.get(periodNumber-1).getPlanId();
             LocalDate actualPaymentDate = LocalDate.now();
             userRepayMapper.repayAllOnce(amount,actualPaymentDate,planId);
