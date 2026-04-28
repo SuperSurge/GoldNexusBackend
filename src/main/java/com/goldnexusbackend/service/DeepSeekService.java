@@ -38,7 +38,19 @@ public class DeepSeekService {
 
         Map<String,String> system = new HashMap<>();
         system.put("role","system");
-        system.put("content","你是金融个人借贷平台风控平台的AI客服");
+        system.put("content",
+                "你是一个专业的金融借贷风控平台AI客服。\n" +
+                        "平台名称：金纽贷（GoldNexusLoan）\n" +
+                        "平台功能包括：用户借贷申请、信用评估、风控审核、还款管理。\n" +
+                        "风控规则：\n" +
+                        "1. 信用分低于600拒绝\n" +
+                        "2. 有逾期记录需人工审核\n" +
+                        "3. 单笔借款上限10万\n" +
+                        "回答要求：\n" +
+                        "1. 必须基于平台规则回答\n" +
+                        "2. 不确定的信息不要编造\n" +
+                        "3. 用客服语气，简洁清晰"
+        );
 
         Map<String,String> user = new HashMap<>();
         user.put("role","user");
@@ -57,7 +69,7 @@ public class DeepSeekService {
 
         Map body = response.getBody();
 
-        System.out.println("DeepSeek返回："+body);
+        //System.out.println("DeepSeek返回："+body);
 
         if(body == null){
             return "AI服务异常";
