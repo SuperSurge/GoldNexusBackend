@@ -20,8 +20,11 @@ public class User {
     private Integer gender;
     private LocalDate age;
     private String address;
+    private Integer addressLevel;
     private Integer marriage;
     private String job;
     private String education;
     private Integer earnings;
+    private Integer property;
+    private float bad_rate;
 }

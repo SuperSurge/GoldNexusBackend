@@ -51,7 +51,7 @@ public interface UserMapper {
     @Update("update user set password=#{password} where username = #{username}")
     int updatePassword(String username, String password);
 
-    @Update("update user set gender=#{gender},age=#{age}, address=#{address},marriage=#{marriage},job=#{job},education=#{education},earnings=#{earnings} where id=#{id}")
+    @Update("update user set gender=#{gender},age=#{age}, address=#{address},addressLevel=#{addressLevel},marriage=#{marriage},job=#{job},education=#{education},earnings=#{earnings},property=#{property} where id=#{id}")
     int updateUserInfo(User user);
 
     @Update("update user set authentication=1,name=#{realName} where id=#{id}")

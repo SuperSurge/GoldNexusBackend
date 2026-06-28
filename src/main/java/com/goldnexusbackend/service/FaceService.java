@@ -21,8 +21,8 @@ import org.springframework.web.multipart.MultipartFile;
 @Slf4j
 public class FaceService {
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String RegisterURL = "http://127.0.0.1:8000/register2";
-    private final String VerifyURL = "http://127.0.0.1:8000/verify";
+    private final String RegisterURL = "http://127.0.0.1:8001/register2";
+    private final String VerifyURL = "http://127.0.0.1:8001/verify";
 
     public FaceRegisterRes register(FaceRegisterForm faceForm) {
 

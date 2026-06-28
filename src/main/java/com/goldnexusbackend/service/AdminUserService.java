@@ -78,6 +78,8 @@ public class AdminUserService {
 
         log.info("进行通过名字搜索用户信息查询");
         User user = adminUserMapper.selectUserByName(name);
+        System.out.println(name);
+        System.out.println(user);
         if (user != null) {
             res.setCode(200);
             res.setMsg("查询成功");

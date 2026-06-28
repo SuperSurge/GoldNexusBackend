@@ -33,7 +33,11 @@ public class UserRepayService {
             return res;
         }
         //如果还款金额恰好等于应还金额+罚息，则还款成功
-        if(amount.compareTo(repaymentList.get(periodNumber-1).getAmount().add(repaymentList.get(periodNumber-1).getPenaltyAmount()))==0){
+        if (amount != null && amount.compareTo(
+                repaymentList.get(periodNumber-1).getAmount()
+                        .add(repaymentList.get(periodNumber-1).getPenaltyAmount() != null ?
+                                repaymentList.get(periodNumber-1).getPenaltyAmount() : BigDecimal.ZERO)
+        ) == 0) {
             Integer planId = repaymentList.get(periodNumber-1).getPlanId();
             LocalDate actualPaymentDate = LocalDate.now();
             userRepayMapper.repayAllOnce(amount,actualPaymentDate,planId);

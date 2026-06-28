@@ -87,7 +87,7 @@ public class AdminLoanService {
             int i = adminLoanMapper.updateLoanApplicationStatus(check);
             if(i>0){
                 if (check.getStatus()==2){
-                    LoanApplication loanApplication = adminLoanMapper.checkApplication(check.getApplicationId());
+                    LoanApplication loanApplication = adminLoanMapper.selectLoanApplicationById(check.getApplicationId());
                     if(loanApplication!=null){
                         int i1 = userLoanService.generateRepayment(loanApplication);
 
@@ -107,8 +107,8 @@ public class AdminLoanService {
                         }
                     }else{
                         res.setCode(500);
-                        res.setMsg("产品id不存在");
-                        log.info("产品id不存在");
+                        res.setMsg("申请id不存在");
+                        log.info("申请id不存在");
                         res.setData(null);
                         return res;
                     }
