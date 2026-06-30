@@ -1,0 +1,113 @@
+2026-07-01T00:48:38.660+08:00  WARN 35379 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m1s838ms).
+2026-07-01T00:50:03.120+08:00  INFO 35379 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-01T00:50:03.123+08:00  INFO 35379 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-01T00:50:03.125+08:00  INFO 35379 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-01T00:50:03.126+08:00  INFO 35379 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-01T00:50:04.289+08:00  INFO 36835 --- [main] c.g.GoldNexusBackendApplication          : Starting GoldNexusBackendApplication using Java 25.0.2 with PID 36835 (/Users/surge/code/java/GoldNexusBackend/target/classes started by surge in /Users/surge/code/java/GoldNexusBackend)
+2026-07-01T00:50:04.291+08:00  INFO 36835 --- [main] c.g.GoldNexusBackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-07-01T00:50:04.708+08:00  INFO 36835 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T00:50:04.712+08:00  INFO 36835 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T00:50:04.712+08:00  INFO 36835 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-07-01T00:50:04.724+08:00  INFO 36835 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T00:50:04.724+08:00  INFO 36835 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 404 ms
+2026-07-01T00:50:04.888+08:00  INFO 36835 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-07-01T00:50:04.979+08:00  INFO 36835 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-01T00:50:04.983+08:00  INFO 36835 --- [main] c.g.GoldNexusBackendApplication          : Started GoldNexusBackendApplication in 0.866 seconds (process running for 1.063)
+2026-07-01T00:50:36.385+08:00  INFO 36835 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-01T00:50:36.386+08:00  INFO 36835 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-01T00:50:36.387+08:00  INFO 36835 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-01T00:50:36.421+08:00  INFO 36835 --- [http-nio-8080-exec-1] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： USER id: 3
+2026-07-01T00:50:36.432+08:00  INFO 36835 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T00:50:36.542+08:00  INFO 36835 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c3c83ea
+2026-07-01T00:50:36.543+08:00  INFO 36835 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T00:50:36.553+08:00  INFO 36835 --- [http-nio-8080-exec-1] c.g.service.CustomerService              : 用户id=3 查询客服聊天记录，共0条
+2026-07-01T00:50:58.038+08:00  INFO 36835 --- [http-nio-8080-exec-3] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： USER id: 3
+2026-07-01T00:50:58.061+08:00  INFO 36835 --- [http-nio-8080-exec-3] c.g.service.CustomerService              : 用户id=3 发送客服消息成功
+2026-07-01T00:51:01.993+08:00  INFO 36835 --- [http-nio-8080-exec-4] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： USER id: 3
+2026-07-01T00:51:01.997+08:00  INFO 36835 --- [http-nio-8080-exec-4] c.g.service.CustomerService              : 用户id=3 查询客服聊天记录，共1条
+2026-07-01T00:51:42.978+08:00  INFO 36835 --- [http-nio-8080-exec-5] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T00:51:42.986+08:00  INFO 36835 --- [http-nio-8080-exec-5] c.g.service.CustomerService              : 管理员查询客服用户列表
+2026-07-01T00:51:59.350+08:00  INFO 36835 --- [http-nio-8080-exec-6] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T00:51:59.355+08:00  WARN 36835 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.goldnexusbackend.entity.Res com.goldnexusbackend.controller.AdminCustomerServiceController.getHistory(java.util.Map<java.lang.String, java.lang.Integer>)]
+2026-07-01T00:51:59.367+08:00  INFO 36835 --- [http-nio-8080-exec-6] c.g.config.SecurityConfiguration         : 已拦截未登录请求
+2026-07-01T00:51:59.367+08:00  INFO 36835 --- [http-nio-8080-exec-6] c.g.config.SecurityConfiguration         : Full authentication is required to access this resource
+2026-07-01T00:52:09.282+08:00  INFO 36835 --- [http-nio-8080-exec-7] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T00:52:09.291+08:00  INFO 36835 --- [http-nio-8080-exec-7] c.g.service.CustomerService              : 管理员查询与用户id=3的聊天记录，共1条
+2026-07-01T00:54:52.639+08:00  INFO 36835 --- [http-nio-8080-exec-10] c.g.config.SecurityConfiguration         : 已拦截未登录请求
+2026-07-01T00:54:52.639+08:00  INFO 36835 --- [http-nio-8080-exec-10] c.g.config.SecurityConfiguration         : Full authentication is required to access this resource
+2026-07-01T00:54:58.797+08:00  INFO 36835 --- [http-nio-8080-exec-2] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T00:54:58.802+08:00  INFO 36835 --- [http-nio-8080-exec-2] c.g.service.CustomerService              : 管理员id=3 回复用户id=3 成功
+2026-07-01T00:55:03.976+08:00  INFO 36835 --- [http-nio-8080-exec-1] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： USER id: 3
+2026-07-01T00:55:03.979+08:00  INFO 36835 --- [http-nio-8080-exec-1] c.g.service.CustomerService              : 用户id=3 查询客服聊天记录，共2条
+2026-07-01T00:57:18.292+08:00  INFO 36835 --- [http-nio-8080-exec-5] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T00:57:18.296+08:00  INFO 36835 --- [http-nio-8080-exec-5] c.g.service.CustomerService              : 管理员查询客服用户列表
+2026-07-01T01:00:09.201+08:00  INFO 36835 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-01T01:00:09.203+08:00  INFO 36835 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-01T01:00:09.205+08:00  INFO 36835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-01T01:00:09.207+08:00  INFO 36835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-01T01:00:24.617+08:00  INFO 37073 --- [main] c.g.GoldNexusBackendApplication          : Starting GoldNexusBackendApplication using Java 25.0.2 with PID 37073 (/Users/surge/code/java/GoldNexusBackend/target/classes started by surge in /Users/surge/code/java/GoldNexusBackend)
+2026-07-01T01:00:24.618+08:00  INFO 37073 --- [main] c.g.GoldNexusBackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-07-01T01:00:24.934+08:00  INFO 37073 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T01:00:24.938+08:00  INFO 37073 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T01:00:24.938+08:00  INFO 37073 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-07-01T01:00:24.949+08:00  INFO 37073 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T01:00:24.949+08:00  INFO 37073 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 315 ms
+2026-07-01T01:00:25.111+08:00  INFO 37073 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-07-01T01:00:25.196+08:00  INFO 37073 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-01T01:00:25.200+08:00  INFO 37073 --- [main] c.g.GoldNexusBackendApplication          : Started GoldNexusBackendApplication in 0.741 seconds (process running for 0.913)
+2026-07-01T01:00:29.768+08:00  INFO 37073 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-01T01:00:29.768+08:00  INFO 37073 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-01T01:00:29.769+08:00  INFO 37073 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-01T01:00:29.799+08:00  INFO 37073 --- [http-nio-8080-exec-2] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T01:00:29.812+08:00  INFO 37073 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T01:00:29.920+08:00  INFO 37073 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66258a7f
+2026-07-01T01:00:29.920+08:00  INFO 37073 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T01:00:29.934+08:00  INFO 37073 --- [http-nio-8080-exec-2] c.g.service.CustomerService              : 管理员查询与用户id=3的聊天记录，共2条
+2026-07-01T01:00:40.950+08:00  INFO 37073 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-01T01:00:40.952+08:00  INFO 37073 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-01T01:00:40.954+08:00  INFO 37073 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-01T01:00:40.955+08:00  INFO 37073 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-01T01:05:01.096+08:00  INFO 37150 --- [main] c.g.GoldNexusBackendApplication          : Starting GoldNexusBackendApplication using Java 25.0.2 with PID 37150 (/Users/surge/code/java/GoldNexusBackend/target/classes started by surge in /Users/surge/code/java/GoldNexusBackend)
+2026-07-01T01:05:01.096+08:00  INFO 37150 --- [main] c.g.GoldNexusBackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-07-01T01:05:01.374+08:00  INFO 37150 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T01:05:01.378+08:00  INFO 37150 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T01:05:01.378+08:00  INFO 37150 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-07-01T01:05:01.387+08:00  INFO 37150 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T01:05:01.387+08:00  INFO 37150 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 278 ms
+2026-07-01T01:05:01.531+08:00  INFO 37150 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-07-01T01:05:01.608+08:00  INFO 37150 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-01T01:05:01.612+08:00  INFO 37150 --- [main] c.g.GoldNexusBackendApplication          : Started GoldNexusBackendApplication in 0.667 seconds (process running for 0.81)
+2026-07-01T01:05:03.497+08:00  INFO 37150 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-01T01:05:03.498+08:00  INFO 37150 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-01T01:05:03.498+08:00  INFO 37150 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-01T01:05:03.532+08:00  INFO 37150 --- [http-nio-8080-exec-2] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T01:05:03.550+08:00  INFO 37150 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T01:05:03.654+08:00  INFO 37150 --- [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a34783e
+2026-07-01T01:05:03.655+08:00  INFO 37150 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T01:05:03.669+08:00  INFO 37150 --- [http-nio-8080-exec-2] c.g.service.CustomerService              : 管理员查询与用户id=3的聊天记录，共2条
+2026-07-01T01:05:13.050+08:00  INFO 37150 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-01T01:05:13.052+08:00  INFO 37150 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-01T01:05:13.055+08:00  INFO 37150 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-01T01:05:13.056+08:00  INFO 37150 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-01T01:14:38.230+08:00  INFO 38164 --- [main] c.g.GoldNexusBackendApplication          : Starting GoldNexusBackendApplication using Java 25.0.2 with PID 38164 (/Users/surge/code/java/GoldNexusBackend/target/classes started by surge in /Users/surge/code/java/GoldNexusBackend)
+2026-07-01T01:14:38.231+08:00  INFO 38164 --- [main] c.g.GoldNexusBackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-07-01T01:14:38.555+08:00  INFO 38164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-01T01:14:38.559+08:00  INFO 38164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-01T01:14:38.559+08:00  INFO 38164 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-07-01T01:14:38.570+08:00  INFO 38164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-01T01:14:38.570+08:00  INFO 38164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 326 ms
+2026-07-01T01:14:38.726+08:00  INFO 38164 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-07-01T01:14:38.811+08:00  INFO 38164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-01T01:14:38.815+08:00  INFO 38164 --- [main] c.g.GoldNexusBackendApplication          : Started GoldNexusBackendApplication in 0.737 seconds (process running for 0.893)
+2026-07-01T01:14:41.755+08:00  INFO 38164 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-01T01:14:41.755+08:00  INFO 38164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-01T01:14:41.756+08:00  INFO 38164 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-01T01:14:41.787+08:00  INFO 38164 --- [http-nio-8080-exec-1] c.g.filter.JwtAuthenticationFilter       : 当前请求用户--权限： ADMIN id: 3
+2026-07-01T01:14:41.801+08:00  INFO 38164 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-01T01:14:41.910+08:00  INFO 38164 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6902c7ff
+2026-07-01T01:14:41.910+08:00  INFO 38164 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-01T01:14:41.925+08:00  INFO 38164 --- [http-nio-8080-exec-1] c.g.service.CustomerService              : 管理员查询与用户id=3的聊天记录，共2条
+2026-07-01T01:14:52.731+08:00  INFO 38164 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-01T01:14:52.733+08:00  INFO 38164 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-01T01:14:52.736+08:00  INFO 38164 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-01T01:14:52.737+08:00  INFO 38164 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
